@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+        content="WindSpirit - $YAS. Join the Spirit and discover the wind's power. Countdown to greatness!">
+    <meta name="keywords" content="WindSpirit, Yasuo, $YAS, Wind Power, Countdown, Join the Spirit">
+    <meta name="author" content="WindSpirit Team">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="WindSpirit - $YAS">
+    <meta property="og:description"
+        content="Join the Spirit and witness the power of the wind. Countdown to greatness!">
+    <meta property="og:image" content="yasuo_no_background.png">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="/imgs/FOR THE WIND.png">
+    <meta name="twitter:title" content="WindSpirit - $YAS">
+    <meta name="twitter:description"
+        content="Join the Spirit and witness the power of the wind. Countdown to greatness!">
+    <meta name="twitter:image" content="/imgs/yasuo_no_background.png">
+    <link rel="icon" href="/imgs/yasuo_no_background.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <title>WindSpirit - $YAS</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Audiowide", serif;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(120deg, #1a1a1d, #4e4e50);
+            color: #fff;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Parallax Background */
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: url('/imgs/FOR THE WIND.png') no-repeat center center/cover;
+            background-size: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            backdrop-filter: blur(30px);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.849);
+            /* Darker overlay */
+            /* Increased blur */
+            z-index: -1;
+        }
+
+        /* Logo */
+        .logo {
+            width: 180px;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Title */
+        .title {
+            font-size: 3rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            color: #00d9ff;
+            background: linear-gradient(90deg, #00d9ff, #00f4a2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: slideInFromLeft 1.5s ease;
+        }
+
+        @keyframes slideInFromLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Countdown Container */
+        .countdown-container {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 30px 30px;
+            margin-top: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            animation: fadeUp 2s ease;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: space-around;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .countdown div {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #00d9ff;
+            text-shadow: 0 0 10px rgba(0, 217, 255, 0.8);
+            animation: pulse 1s infinite alternate;
+        }
+
+        .countdown .context {
+            margin: 0 20px;
+        }
+
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.1);
+            }
+        }
+
+        .countdown span {
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        /* Call-to-Action Button */
+        .cta-button {
+            margin-top: 30px;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            color: #fff;
+            background: linear-gradient(90deg, #00d9ff, #00f4a2);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 217, 255, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 217, 255, 0.8);
+        }
+
+        footer {
+            margin-top: 100px;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding-top: 30%;
+                background-size: cover;
+            }
+
+            .logo {
+                width: 120px;
+            }
+
+            .title {
+                font-size: 2rem;
+            }
+
+            .countdown-container {
+                margin-top: 0;
+                padding: 30px 0px;
+
+            }
+
+            .countdown .context {
+                margin: 0 0px;
+            }
+
+            .countdown div {
+                font-size: 1.3rem;
+                width: 90px;
+            }
+
+            .cta-button {
+                font-size: 1rem;
+            }
+
+            footer {
+                margin-top: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <img src="/imgs/yasuo_no_background.png" alt="$YAS Logo" class="logo">
+        <h1 class="title">WindSpirit - $YAS</h1>
+        <div class="countdown-container">
+            <div class="countdown" id="countdown">
+                <div class="context">
+                    <div id="days">00</div><span>Days</span>
+                </div>
+                <div class="context">
+                    <div id="hours">00</div><span>Hours</span>
+                </div>
+                <div class="context">
+                    <div id="minutes">00</div><span>Mins</span>
+                </div>
+                <div class="context">
+                    <div id="seconds">00</div><span>Secs</span>
+                </div>
+            </div>
+        </div>
+        <button class="cta-button"><a href="https://x.com/windspiritcoin">TWITTER</a></button>
+        <button class="cta-button">TRADE</button>
+        <footer>
+            For the Wind. Join the Spirit. $YAS
+        </footer>
+    </div>
+    <script>
+        // Countdown Timer
+        function startGlobalCountdown(targetDate) {
+            const daysEl = document.getElementById('days');
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+            const endTime = new Date(targetDate).getTime();
+
+            setInterval(function () {
+                const now = new Date().getTime();
+                const remainingTime = endTime - now;
+
+                if (remainingTime > 0) {
+                    const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+                    daysEl.textContent = String(days).padStart(2, '0');
+                    hoursEl.textContent = String(hours).padStart(2, '0');
+                    minutesEl.textContent = String(minutes).padStart(2, '0');
+                    secondsEl.textContent = String(seconds).padStart(2, '0');
+                }
+            }, 1000);
+        }
+
+        startGlobalCountdown('2024-12-20T13:00:00Z');
+    </script>
+</body>
+
+</html>
