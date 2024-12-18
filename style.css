@@ -1,0 +1,258 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Audiowide', sans-serif;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #1a1a1d, #4e4e50);
+    color: #fff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Parallax Background */
+.hero {
+    position: relative;
+    height: 130vh;
+    background: url('/imgs/FOR THE WIND.png') no-repeat center center/cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    padding: 0 20px;
+    backdrop-filter: blur(20px);
+    padding-top: 10px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: -1;
+}
+
+/* Logo */
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Title */
+.title {
+    font-size: 3rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: #00d9ff;
+    background: linear-gradient(90deg, #00d9ff, #00f4a2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: slideInFromLeft 1.5s ease;
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Countdown Container */
+.countdown-container {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 20px 30px;
+    margin-top: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeUp 2s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.countdown {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    text-align: center;
+    gap: 15px;
+}
+
+.countdown div {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #00d9ff;
+    text-shadow: 0 0 10px rgba(0, 217, 255, 0.8);
+    animation: pulse 1s infinite alternate;
+}
+
+.countdown span {
+    font-size: 1rem;
+    color: #fff;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    background: linear-gradient(90deg, #00d9ff, #00f4a2);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 217, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 217, 255, 0.8);
+}
+
+.cta-button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .logo {
+        margin-bottom: 0px;
+    }
+
+    .cta-button {
+        margin-top: 0px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+        margin-bottom: 0px;
+    }
+
+    .countdown div {
+        font-size: 2.5rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 20% 15px;
+        background-size: cover;
+        justify-content: space-around;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .title {
+        font-size: 2rem;
+        letter-spacing: 3px;
+    }
+
+    .countdown-container {
+        padding: 15px 20px;
+        margin-top: 10px;
+    }
+
+    .countdown {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .countdown div {
+        font-size: 2rem;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    footer {
+        margin-top: 30px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .countdown div {
+        font-size: 1.5rem;
+    }
+
+    .cta-button {
+        padding: 6px 12px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
