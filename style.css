@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Audiowide', sans-serif;
+    font-family: 'Audiowide', serif;
 }
 
 body {
@@ -17,7 +17,7 @@ body {
 /* Parallax Background */
 .hero {
     position: relative;
-    height: 130vh;
+    height: 100vh;
     background: url('/imgs/FOR THE WIND.png') no-repeat center center/cover;
     background-size: cover;
     display: flex;
@@ -88,7 +88,7 @@ body {
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 15px;
-    padding: 20px 30px;
+    padding: 20px 100px;
     margin-top: 20px;
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
@@ -139,7 +139,6 @@ body {
 
 /* Call-to-Action Button */
 .cta-button {
-    margin-top: 20px;
     padding: 12px 30px;
     font-size: 1.2rem;
     color: #fff;
@@ -151,6 +150,7 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-transform: uppercase;
     text-align: center;
+    margin: 20px 20px;
 }
 
 .cta-button:hover {
