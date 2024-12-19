@@ -37,34 +37,13 @@
         <h1 class="title">WindSpirit - $YAS</h1>
         <div class="countdown-container">
             <div class="countdown" id="countdown">
-                <div class="context">
-                    <div id="days">00</div><span>Days</span>
-                </div><br>
-                <div class="context">
-                    <div id="days">:</div><span></span>
-                </div>
-                <br>
-                <div class="context">
-                    <div id="hours">00</div><span>Hours</span>
-                </div><br>  
-                <div class="context">
-                    <div id="days">:</div><span></span>
-                </div>
-                <br>
-                <div class="context">
-                    <div id="minutes">00</div><span>Mins</span>
-                </div><br>
-                <div class="context">
-                    <div id="days">:</div><span></span>
-                </div>
-                <br>
-                <div class="context">
-                    <div id="seconds">00</div><span>Secs</span>
-                </div>
+                <p>WindSpirit Coin channels Yasuo unstoppable resolve. Powered by a loyal community, <span style="color: goldenrod;">$YAS</span> embodies resilience, 
+                    precision and luck, like Yasuo main on the Rift. With the wind at its back, <span style="color: goldenrod;">$YAS</span> slashes through market 
+                    volatility, aiming for legendary status.</p>
             </div>
         </div>
         <div>
-            <button class="cta-button"><a href="" target="_blank">TRADE ON PUMP.FUN</a></button>
+            <button class="cta-button"><a href="" target="_blank">TRADE ON PUMP.FUN <img src="imgs/pump-santa.webp" alt=""></a></button>
             <button class="cta-button"><a href="https://four.meme/token/0x658a2b1904736aa727ddf7cd3756beeca63582b1" target="_blank">TRADE ON FOUR.MEME</a></button>
             <button class="cta-button"><a href="https://x.com/windspiritcoin" target="_blank">TWITTER</a></button>
         </div>
@@ -72,35 +51,6 @@
             For the Wind. Join the Spirit. $YAS
         </footer>
     </div>
-    <script>
-        // Countdown Timer
-        function startGlobalCountdown(targetDate) {
-            const daysEl = document.getElementById('days');
-            const hoursEl = document.getElementById('hours');
-            const minutesEl = document.getElementById('minutes');
-            const secondsEl = document.getElementById('seconds');
-            const endTime = new Date(targetDate).getTime();
-
-            setInterval(function () {
-                const now = new Date().getTime();
-                const remainingTime = endTime - now;
-
-                if (remainingTime > 0) {
-                    const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-
-                    daysEl.textContent = String(days).padStart(2, '0');
-                    hoursEl.textContent = String(hours).padStart(2, '0');
-                    minutesEl.textContent = String(minutes).padStart(2, '0');
-                    secondsEl.textContent = String(seconds).padStart(2, '0');
-                }
-            }, 1000);
-        }
-
-        startGlobalCountdown('2024-12-19T12:00:00Z');
-    </script>
 </body>
 
 </html>
